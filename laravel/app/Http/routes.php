@@ -1,4 +1,11 @@
 <?php
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Tien Nguyen <tien.nguyen@mulodo.com>
+ */
+
 /*
  * |--------------------------------------------------------------------------
  * | Application Routes
@@ -24,22 +31,46 @@
  */
 // Mulodo Company Site without connecting database
 Route::resource ( 'company', 'MulodoController' );
-
 // Admin system
 Route::group ( [ 
 		'middleware' => 'auth' 
 ], function () {
 	Route::group ( [ 
 			'prefix' => 'administrator',
-			'namespace' => 'admin'
+			'namespace' => 'admin' 
 	], function () {
 		Route::resource ( 'sliders', 'SliderController' );
 		Route::get ( 'sliders/edit/{id}', 'SliderController@edit' );
 		Route::any ( 'sliders', 'SliderController@store' );
+		
+		// end route group
 	} );
 	
 	// general admin
 	Route::resource ( 'administrator', 'MulodoAdminController' );
+} );
+
+// Manual Authentication
+Route::group ( [ 
+		'prefix' => 'manual-admin',
+		'namespace' => 'admin' 
+], function () {
+	// sample about authentication: checking, remember, etc...
+	// Route::resource('sample/authentication','sample\AuthenticationController');
+	Route::get ( 'authentication/sample-1', [ 
+			'as' => 'authentication-sample-1',
+			'uses' => 'sample\AuthenticationController@manualLogging' 
+	] );
+	Route::get ( 'authentication/sample-2', [ 
+			'as' => 'authentication-sample-2',
+			'uses' => 'sample\AuthenticationController@manualLogging2' 
+	] );
+	Route::get ( 'authentication/sample-3/{id}', [ 
+			'as' => 'authentication-sample-3',
+			'uses' => 'sample\AuthenticationController@loginById' 
+	] );
+	
+	// end route group
 } );
 
 // Mulodo Company Site connecting database and retrieving data.
@@ -399,11 +430,11 @@ Route::get ( 'general', [
 
 // =================================================================================================
 // Cheat Sheets
-Route::get ( 'cheatsheets', [
+Route::get ( 'cheatsheets', [ 
 		'as' => 'cheatsheets',
 		function () {
 			return view ( "todc.cheatsheets" );
-		}
+		} 
 ] );
 
 // =================================================================================================
@@ -416,3 +447,22 @@ Route::get ( 'models', [
 ] );
 
 // =================================================================================================
+// Architecture foundations
+Route::get ( 'architecture', [ 
+		'as' => 'architecture',
+		function () {
+			return view ( "todc.architecture" );
+		} 
+] );
+
+// =================================================================================================
+// Services
+Route::get ( 'services', [ 
+		'as' => 'services',
+		function () {
+			return view ( "todc.services" );
+		} 
+] );
+
+// =================================================================================================
+

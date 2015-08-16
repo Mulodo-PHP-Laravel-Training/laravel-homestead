@@ -162,6 +162,35 @@
 					</ul>
 				</li>
 				<li
+					class="dropdown {{ URL::current() == route('architecture') ? 'active' : '' }}">
+					<a href="{{ url('architecture') }}" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="true">Architecture Foundations <span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-header">Dependency injection</li>
+						<li role="separator" class="divider"></li>
+						<li><a href="{{ route('architecture') }}#vt1-1">Dependency injection</a></li>
+						<li><a href="{{ route('architecture') }}#vt1-2">Service Providers & Service Containers</a></li>
+						<li><a href="{{ route('architecture') }}#vt1-3">Facades</a></li>
+						<li class="dropdown-header">Facades Examples</li>
+						<li role="separator" class="divider"></li>
+						<li><a href="{{ route('architecture') }}#vt1-3-1">Using Laravel 5's Authentication Facade</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="{{ route('architecture') }}#vt1-4">Request LifeCycle</a></li>
+					</ul>
+				</li>
+				<li
+					class="dropdown {{ URL::current() == route('services') ? 'active' : '' }}">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
+					aria-haspopup="true" aria-expanded="true" href="{{ url('services') }}">Services
+						<span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ url('services') }}#vt2-1">Authentication</a></li>
+					</ul>
+				</li>
+				<li
 					class="dropdown {{ URL::current() == route('cheatsheets') ? 'active' : '' }}">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
 					aria-haspopup="true" aria-expanded="true" href="{{ url('cheatsheets') }}">Cheat Sheets

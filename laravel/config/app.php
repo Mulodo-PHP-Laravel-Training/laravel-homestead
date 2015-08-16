@@ -146,7 +146,8 @@ return [
     	
     	// Tien Nguyen - installation form
     	'Collective\Html\HtmlServiceProvider',
-    	Bestmomo\Scafold\ScafoldServiceProvider::class
+    	Bestmomo\Scafold\ScafoldServiceProvider::class,
+    	App\Providers\RiakServiceProvider::class,
 
     ],
 

@@ -16,7 +16,8 @@ class UsersSeeder extends Seeder
 		User::truncate ();
 		// add 1st row
 		User::create ( [
-				'name' => 'Anna',
+				'first_name' => 'Anna',
+				'last_name' => 'Anna',
 				'email' => 'tien.nguyen@mulodo.com',
 				'password' => '$2y$10$qQdDaXWbo4itF/B12I7KgOIkLBgMuA9O3xup1VoN1vwv69YF2P1Ga'
 		] );
