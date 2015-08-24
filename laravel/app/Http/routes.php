@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Database\Eloquent\Model;
+use App\Http\Controllers\admin\sample\CheatsheetsController;
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
@@ -50,28 +52,6 @@ Route::group ( [
 	Route::resource ( 'administrator', 'MulodoAdminController' );
 } );
 
-// Manual Authentication
-Route::group ( [ 
-		'prefix' => 'manual-admin',
-		'namespace' => 'admin' 
-], function () {
-	// sample about authentication: checking, remember, etc...
-	// Route::resource('sample/authentication','sample\AuthenticationController');
-	Route::get ( 'authentication/sample-1', [ 
-			'as' => 'authentication-sample-1',
-			'uses' => 'sample\AuthenticationController@manualLogging' 
-	] );
-	Route::get ( 'authentication/sample-2', [ 
-			'as' => 'authentication-sample-2',
-			'uses' => 'sample\AuthenticationController@manualLogging2' 
-	] );
-	Route::get ( 'authentication/sample-3/{id}', [ 
-			'as' => 'authentication-sample-3',
-			'uses' => 'sample\AuthenticationController@loginById' 
-	] );
-	
-	// end route group
-} );
 
 // Mulodo Company Site connecting database and retrieving data.
 // =================================================================================================
@@ -432,8 +412,9 @@ Route::get ( 'general', [
 // Cheat Sheets
 Route::get ( 'cheatsheets', [ 
 		'as' => 'cheatsheets',
-		function () {
-			return view ( "todc.cheatsheets" );
+		function (CheatsheetsController $obj) {
+			$data = $obj->index();
+			return view ( "todc.cheatsheets" )->with($data);
 		} 
 ] );
 
@@ -464,5 +445,137 @@ Route::get ( 'services', [
 		} 
 ] );
 
-// =================================================================================================
+// Manual Authentication
+Route::group ( [
+		'prefix' => 'manual-admin',
+		'namespace' => 'admin'
+], function () {
+	// sample about authentication: checking, remember, etc...
+	// Route::resource('sample/authentication','sample\AuthenticationController');
+	Route::get ( 'authentication/sample-1/{email}/{password}', [
+			'as' => 'authentication-sample-1',
+			'uses' => 'sample\AuthenticationController@manualLogging'
+	] );
+	Route::get ( 'authentication/sample-2/{email}/{password}', [
+			'as' => 'authentication-sample-2',
+			'uses' => 'sample\AuthenticationController@manualLogging2'
+	] );
+	Route::get ( 'authentication/sample-3/{id}', [
+			'as' => 'authentication-sample-3',
+			'uses' => 'sample\AuthenticationController@loginById'
+	] );
+	Route::get ( 'authentication/sample-4', [
+			'as' => 'authentication-sample-4',
+			'uses' => 'sample\AuthenticationController@checkAuthStatus'
+	] );
+	Route::get ( 'authentication/sample-5/{email}/{password}', [
+			'as' => 'authentication-sample-5',
+			'uses' => 'sample\AuthenticationController@validateByCredentials'
+	] );
+	Route::get ( 'authentication/sample-6/{email}/{password}', [
+			'as' => 'authentication-sample-6',
+			'uses' => 'sample\AuthenticationController@loginForRequest'
+	] );
+	Route::get ( 'authentication/sample-7/{email}/{password}', [
+			'as' => 'authentication-sample-7',
+			'uses' => 'sample\AuthenticationController@manualLoggingInUser'
+	] );
+	Route::get ( 'authentication/sample-8', [
+			'as' => 'authentication-sample-8',
+			'uses' => 'sample\AuthenticationController@logout'
+	] );
 
+	// end route group
+} );
+
+// Socialite Authentication
+Route::group ( [
+		'prefix' => 'socialite',
+		'namespace' => 'admin'
+], function () {
+	Route::get ( 'github/redirectToProvider', [
+			'as' => 'github-redirectToProvider',
+			'uses' => 'sample\GithubController@redirectToProvider'
+	] );
+	Route::get ( 'github/callback', [
+			'as' => 'github-callback',
+			'uses' => 'sample\GithubController@handleProviderCallback'
+	] );
+
+
+} );
+// =================================================================================================
+// Database
+Route::get ( 'database', [
+		'as' => 'database',
+		function () {
+			return view ( "todc.database" );
+		}
+] );
+
+// samples about database
+Route::group ( [
+		'prefix' => 'database',
+		'namespace' => 'admin'
+], function () {
+	Route::get ( 'sample-1', [
+			'as' => 'db-sample-1',
+			'uses' => 'sample\DBController@sampleSelect1'
+	] );
+	Route::get ( 'sample-2/{id}', [
+			'as' => 'db-sample-2',
+			'uses' => 'sample\DBController@sampleSelect2'
+	] );
+	Route::get ( 'sample-3/{name}', [
+			'as' => 'db-sample-3',
+			'uses' => 'sample\DBController@sampleSelect3'
+	] );
+	Route::get ( 'sample-4/{id}/{email}', [
+			'as' => 'db-sample-4',
+			'uses' => 'sample\DBController@sampleSelect4'
+	] );
+	Route::get ( 'sample-5', [
+			'as' => 'db-sample-5',
+			'uses' => 'sample\DBController@sampleSelect5'
+	] );
+	Route::get ( 'sample-6', [
+			'as' => 'db-sample-6',
+			'uses' => 'sample\DBController@sampleSelect6'
+	] );
+	Route::get ( 'sample-7/{method}', [
+			'as' => 'db-sample-7',
+			'uses' => 'sample\DBController@sampleSelect7'
+	] );
+	Route::get ( 'sample-8/{method}', [
+			'as' => 'db-sample-8',
+			'uses' => 'sample\DBController@sampleSelect8'
+	] );
+	Route::get ( 'sample-9/{method}', [
+			'as' => 'db-sample-9',
+			'uses' => 'sample\DBController@sampleSelect9'
+	] );
+	Route::get ( 'sample-10/{method}', [
+			'as' => 'db-sample-10',
+			'uses' => 'sample\DBController@sampleSelect10'
+	] );
+	Route::get ( 'sample-11/{method}', [
+			'as' => 'db-sample-11',
+			'uses' => 'sample\DBController@sampleSelect11'
+	] );
+	
+	// 
+	Route::get ( 'eloquent-samples/{param}', [
+			'as' => 'eloquent-samples',
+			'uses' => 'sample\ClientController@index'
+	] );
+
+	// end route group
+} );
+// =================================================================================================
+// Vagrant
+Route::get ( 'vagrant', [
+		'as' => 'vagrant',
+		function () {
+			return view ( "todc.vagrant" );
+		}
+] );

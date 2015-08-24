@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use DB;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        DB::listen(function($sql, $bindings, $time) {
+        	//echo "Service Provider: process to write logs or debug queries.";
+        	// process to write logs or debug queries.
+        });
     }
 
     /**

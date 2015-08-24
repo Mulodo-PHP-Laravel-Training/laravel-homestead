@@ -7,7 +7,8 @@
 	<!-- Example row of columns -->
 	<div class="row">
 		<div class="col-lg-12">@include('todc.cheatsheets.detail-1')</div>
-		<div class="col-lg-12" id= "cs2">@include('todc.cheatsheets.detail-2')</div>
+		<div class="col-lg-12" id= "vt2">@include('todc.cheatsheets.detail-2')</div>
+		<div class="col-lg-12" id= "vt3">@include('todc.cheatsheets.detail-3')</div>
 	</div>
 	<hr>
 

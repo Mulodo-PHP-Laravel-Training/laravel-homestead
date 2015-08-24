@@ -37,6 +37,7 @@
 						<li><a href="{{ url('general') }}#g2-2">Installation of phpMyAdmin</a></li>
 						<li><a href="{{ url('general') }}#g2-3">Clone Laravel Homestead and configure</a></li>
 						<li><a href="{{ url('general') }}#g2-4">Installing multi sites</a></li>
+						<li><a href="{{ url('general') }}#g2-5">Installing HomeStead on Windows 8.1</a></li>
 						<!-- Installation -->
 						<!-- Database -->
 						<li role="separator" class="divider"></li>
@@ -191,14 +192,42 @@
 					</ul>
 				</li>
 				<li
+					class="dropdown {{ URL::current() == route('database') ? 'active' : '' }}">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
+					aria-haspopup="true" aria-expanded="true" href="{{ url('database') }}">Database
+						<span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ url('database') }}#vt1">Basic Usage</a></li>
+						<li><a href="{{ url('database') }}#vt2">Query Builder</a></li>
+						<li><a href="{{ url('database') }}#vt3">Eloquent ORM</a></li>
+						<li><a href="{{ url('database') }}#vt4">Schema Builder</a></li>
+						<li><a href="{{ url('database') }}#vt5">Migrations & Seeding</a></li>
+						<li><a href="{{ url('database') }}#vt6">Redis</a></li>
+					</ul>
+				</li>
+				<li
 					class="dropdown {{ URL::current() == route('cheatsheets') ? 'active' : '' }}">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
 					aria-haspopup="true" aria-expanded="true" href="{{ url('cheatsheets') }}">Cheat Sheets
 						<span class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ url('cheatsheets') }}">Laravel 5</a></li>
-						<li><a href="{{ url('cheatsheets') }}#cs2">Git</a></li>
+						<li><a href="{{ url('cheatsheets') }}#vt1">Laravel 5</a></li>
+						<li><a href="{{ url('cheatsheets') }}#vt2">Artisan</a></li>
+						<li><a href="{{ url('cheatsheets') }}#vt3">Git</a></li>
+					</ul>
+				</li>
+				<li
+					class="dropdown {{ URL::current() == route('vagrant') ? 'active' : '' }}">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
+					aria-haspopup="true" aria-expanded="true" href="{{ url('vagrant') }}">Vagrant
+						<span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ url('vagrant') }}#vt1">Install</a></li>
+						<li><a href="{{ url('vagrant') }}#vt2"></a></li>
+						<li><a href="{{ url('vagrant') }}#vt3"></a></li>
 					</ul>
 				</li>
 			</ul>

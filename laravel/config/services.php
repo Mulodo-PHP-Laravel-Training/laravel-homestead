@@ -34,5 +34,12 @@ return [
         'key'    => '',
         'secret' => '',
     ],
+	
+	// Tien Nguyen: configure github app
+	'github' => [
+			'client_id' => '0db4a0a87405e853bccd',
+			'client_secret' => '2f9cdc7bbca7a0f42a8520d0acf055402b83216b',
+			'redirect' => 'http://homestead.app/socialite/github/callback/',
+	],
 
 ];

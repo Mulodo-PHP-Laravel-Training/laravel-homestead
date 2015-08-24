@@ -72,3 +72,57 @@ homesteadRoot=~/.company-homestead
 After using homestead, you can destroy them by using
 <code>homestead destroy</code>
 <hr>
+<h3 id="g2-5">Installing HomeStead on Windows 8.1</h3>
+<p>Step by step to install</p>
+<ul>
+<li>Install Virtual Box : https://www.virtualbox.org/wiki/Downloads
+<li>Install Vagrant : http://www.vagrantup.com/downloads.html
+<li>Install Git-Scm : http://git-scm.com/
+<li>On Desktop , create folder name <code>Code</code>, open this folder with <code>Git Bash</code>
+<li>Clone Homestead repository <code>$ git clone https://github.com/Mulodo-PHP-Laravel-Training/laravel-homestead.git</code>
+<li>Open file <code>init.sh</code> to change <code>homesteadRoot</code>
+<li>Run <code>init.sh</code> in <code>laravel-homestead</code> directory
+<pre>$ bash init.sh
+// bash command will create file Homstead.yaml  ( if you don’t see this file, that means you entered wrong path )
+</pre>
+</li>
+<li>Back to root folder & set SSH Key <code>$ ssh-keygen -t rsa -C "you@homestead"</code>
+<li>Find and edit file <code>Homestead.yaml</code>
+<pre>
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: C:/Users/mulodo/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/mulodo/.ssh/id_rsa
+
+folders:
+    - map: C:/Users/mulodo/Desktop/Code/laravel-homestead
+      to: /home/vagrant/Code
+
+sites:
+    - map: homestead.app
+      to: /vagrant/laravel/public
+
+databases:
+    - homestead
+</pre>
+</li>
+<li>Add a host into <code>hosts file</code> such as <code>127.0.0.1 homestead.app</code>
+<li>Run <code>vagrant</code> in folder contain Homestead.yaml like this <code>$ vagrant up</code> (If you see a bootstrap page, that’s success)
+<li>Open putty or SSH client and login with this info
+<ul>
+<li>host : 127.0.0.1
+<li>port : 2222
+<li>user : vagrant
+<li>pass : empty or vagrant
+</ul>
+</li>
+<li>Go to laravel folder <code>$ cd /vagrant/laravel/</code>
+<li>Install composer <code>$ curl -sS https://getcomposer.org/installer | php</code>
+<li>Install Laravel library <code>$ php composer.phar install</code>
+<li>Create app key <code>$ php artisan key:generate</code>
+</ul>

@@ -55,3 +55,12 @@ Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+
 <li>After that, paste it into token (hidden) on your terminal. Then press enter to continue process.
 <li>Sample token: 04667316fa1d9dcfce20820f1825611bdb2b654b
 </ul>
+<hr>
+<div class="alert alert-danger" role="alert">Error 5: Socialite: InvalidStateException in AbstractProvider.php </div>
+<h4><span class="label label-success">Solution</span></h4>
+<ul>
+<li>Go to your www root, check the laravel file <code>config/session.php</code>
+<li>Check session <code>Session Cookie Domain</code>
+<li>The default configuration is <code>'domain' => null</code>, I made a change to <code>'domain' => 'homestead.app',</code>
+<li>Run <code>php artisan cache:clear</code> and <code>composer dump-autoload</code>
+</ul>

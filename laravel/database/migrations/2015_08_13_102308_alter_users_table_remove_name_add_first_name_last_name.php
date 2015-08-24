@@ -16,6 +16,7 @@ class AlterUsersTableRemoveNameAddFirstNameLastName extends Migration
             $table->dropColumn('name'); // delete default field named "name"
             $table->string('first_name', 50)->after('id'); // add new field
             $table->string('last_name', 50)->after('first_name'); // add new field
+            $table->string('votes', 50)->after('last_name'); // add new field
         });
     }
 
@@ -29,6 +30,7 @@ class AlterUsersTableRemoveNameAddFirstNameLastName extends Migration
         Schema::table('users', function($table){
             $table->dropColumn('last_name'); // remove new field
             $table->dropColumn('first_name'); // remove new field
+            $table->dropColumn('votes'); // remove new field
             $table->string('name')->after('id'); // reverse default field for user table (default table)
         });
     }

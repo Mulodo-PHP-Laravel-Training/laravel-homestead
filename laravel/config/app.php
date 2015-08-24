@@ -144,10 +144,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     	
-    	// Tien Nguyen - installation form
+    	// Tien Nguyen - more already here...
     	'Collective\Html\HtmlServiceProvider',
     	Bestmomo\Scafold\ScafoldServiceProvider::class,
     	App\Providers\RiakServiceProvider::class,
+    	'Laravel\Socialite\SocialiteServiceProvider',
 
     ],
 
@@ -198,7 +199,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
     	'Form' => 'Collective\Html\FormFacade',
     	'Html' => 'Collective\Html\HtmlFacade',
-
+    	'Socialize' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
