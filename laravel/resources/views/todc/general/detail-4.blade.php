@@ -53,6 +53,9 @@ dd8802a  default virtualbox running /Users/user/.composer/vendor/laravel/homeste
 <h3>Links</h3>
 <ul>
 	<li><a
+		href="http://packalyst.com/"
+		target="_blank">Packalyst is a directory of Packages for your Laravel projects</a></li>
+	<li><a
 		href="http://www.sitepoint.com/6-reasons-move-laravel-homestead/"
 		target="_blank">6 Reasons to Move to Laravel Homestead </a></li>
 	<li><a

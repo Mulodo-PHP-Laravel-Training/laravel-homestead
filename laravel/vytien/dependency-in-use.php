@@ -19,14 +19,14 @@ class Person {
 	}
 }
 
-class Student extends Person {
-	public function __construct(Student $student) {
-		
+class Student {
+	public function __construct(Person $person) {
+		$this->student = $person;
 	}
 	public function getStudentName() {
-		return strtoupper($this->fullname);
+		return strtoupper($this->student->fullname);
 	}
 	public function getStudentInfo() {
-		return strtoupper($this->fullname.$this->address);
+		return strtoupper($this->student->fullname.$this->student->address);
 	}
 }

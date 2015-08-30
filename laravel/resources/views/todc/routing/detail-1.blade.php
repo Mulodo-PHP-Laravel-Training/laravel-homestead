@@ -7,6 +7,7 @@
 	class. The most basic Laravel routes simply accept a URI and a
 	<code>Closure</code>
 </p>
+
 <pre>
 Route::get('/', function () {
     return 'Hello World';

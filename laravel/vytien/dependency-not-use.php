@@ -21,12 +21,16 @@ class Person {
 
 class Student extends Person {
 	public function __construct($fullname, $address) {
-		$this = new Person($fullname, $address);
+		$this->obj = Person::__construct($fullname, $address);
 	}
 	public function getStudentName() {
-		return strtoupper($this->fullname);
+		return strtoupper($this->obj->fullname);
 	}
 	public function getStudentInfo() {
-		return strtoupper($this->fullname.$this->address);
+		return strtoupper($this->obj->fullname.$this->obj->address);
 	}
 }
+
+// Usage
+$objStudent = new Student("Anna", "HCM City");
+var_dump($objStudent);

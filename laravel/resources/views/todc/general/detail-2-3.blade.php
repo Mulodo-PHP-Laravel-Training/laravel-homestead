@@ -1,33 +1,67 @@
 <h3 id="g2-3-1">Connect database</h3>
 <ul>
-<li>Open Terminal and go to your working folder
-<li>Type <code>homestead ssh</code>
+	<li>Open Terminal and go to your working folder
+	
+	<li>Type <code>homestead ssh</code>
+
 </ul>
 <hr>
 <h3 id="g2-3-3">Create one table</h3>
 <ul>
-<li>Using <code>cd</code> to go to your virtual folder where contains <code>public folder</code>. Example in here <code>/home/vagrant/Code/laravel</code>
-<li>Type <code>php artisan make:migration [table name]</code> to create one table in <code>database/migrations</code>
-<pre>php artisan make:migration sliders_table</pre>
-</li>
+	<li>Using <code>cd</code> to go to your virtual folder where contains <code>public
+			folder</code>. Example in here <code>/home/vagrant/Code/laravel</code>
+	
+	<li>Type <code>php artisan make:migration [table name]</code> to create
+		one table in <code>database/migrations</code> <pre>php artisan make:migration sliders_table</pre>
+	</li>
+	<li>Schema Builder
+		<p>The Laravel Schema class provides a database agnostic way of
+			manipulating tables. It works well with all of the databases
+			supported by Laravel, and has a unified API across all of these
+			systems.</p> <pre>
+public function up()
+    {
+        Schema::create('sliders', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->string('image');
+            $table->string('description');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('sliders');
+    }
+</pre>
+	</li>
 </ul>
 <hr>
 <h3 id="g2-3-2">Migrate tables</h3>
 <ul>
-<li>Using <code>cd</code> to go to your virtual folder where contains <code>public folder</code>. Example in here <code>/home/vagrant/Code/laravel</code>
-<li>Type <code>php artisan migrate</code> to migrate tables in <code>database/migrations</code>
+	<li>Using <code>cd</code> to go to your virtual folder where contains <code>public
+			folder</code>. Example in here <code>/home/vagrant/Code/laravel</code>
+	
+	<li>Type <code>php artisan migrate</code> to migrate tables in <code>database/migrations</code>
+
 </ul>
 <hr>
 <h3 id="g2-3-4">Add sample data into tables</h3>
 <ul>
-<li>Create a model by typing <code>php artisan make:mode [name.model]</code> and there is a file "app/sliders.php" created.
-<pre>php artisan make:mode sliders</pre>
-</li>
-<li>Create a seed into <code>database/seeds</code> by typing <code>php artisan make:seeder [name.seed]</code>
-<pre>php artisan make:seeder SlidersSeeder</pre>
-</li>
-<li>Add sample into the file <code>database/seeds/SlidersSeeder.php</code>
-<pre>
+	<li>Create a model by typing <code>php artisan make:mode [name.model]</code>
+		and there is a file "app/sliders.php" created. <pre>php artisan make:mode sliders</pre>
+	</li>
+	<li>Create a seed into <code>database/seeds</code> by typing <code>php
+			artisan make:seeder [name.seed]</code> <pre>php artisan make:seeder SlidersSeeder</pre>
+	</li>
+	<li>Add sample into the file <code>database/seeds/SlidersSeeder.php</code>
+		<pre>
 use Illuminate\Database\Seeder;
 use App\sliders;
 class SlidersSeeder extends Seeder {
@@ -70,9 +104,9 @@ class SlidersSeeder extends Seeder {
 	}
 }
 </pre>
-</li>
-<li>Open file <code>database/seeds/DatabaseSeeder.php</code> and add code to run the seed above
-<pre>
+	</li>
+	<li>Open file <code>database/seeds/DatabaseSeeder.php</code> and add
+		code to run the seed above <pre>
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -93,7 +127,25 @@ class DatabaseSeeder extends Seeder
     }
 }
 </pre>
-</li>
-<li>Type <code>php artisan db:seed</code> in terminal to insert data into the table</li>
+	</li>
+	<li>Type <code>php artisan db:seed</code> in terminal to insert data
+		into the table
+	</li>
 </ul>
+<h3>Summary about main commands that we should remember</h3>
+<pre>
+php artisan migrate:make create_users_table
+
+php artisan migrate
+
+php artisan migrate:rollback // last migration
+
+php artisan migrate:reset //Rollback all migrations
+
+Rollback all migrations and run them all again
+php artisan migrate:refresh
+php artisan migrate:refresh –seed
+
+php artisan db:seed --class=UserTableSeeder
+</pre>
 <hr>

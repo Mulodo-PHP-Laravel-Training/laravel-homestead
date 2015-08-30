@@ -14,6 +14,8 @@
 					application and where all the pages are, and the routes file is
 					like staring down at a roadmap from the clouds.
 				</p>
+				<p>There are 3 types of routing: <code>Implicit Routing, Routing to
+					Controller and Routing to Resources (REST)</code></p>
 				<p>
 					<a class="btn btn-primary btn-lg"
 						href="http://laravel.com/docs/master/middleware" role="button">Learn

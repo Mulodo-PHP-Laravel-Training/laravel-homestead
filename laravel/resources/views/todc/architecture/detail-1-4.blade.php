@@ -3,7 +3,7 @@
 	you understand how that tool works. Application development is no
 	different. When you understand how your development tools function, you
 	feel more comfortable and confident using them.</p>
-<div class="row">
+<!--div class="row">
 	<div id="carousel-example-generic" class="carousel slide"
 		data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -21,7 +21,7 @@
 					src="img/MVC-pattern-01.png"
 					data-holder-rendered="true" height="675">
 			</div>
-			<div class="item">
+			<div class="item active">
 				<img data-src="img/laravel-DB-operations-01.png"
 					alt="Database operations"
 					src="img/laravel-DB-operations-01.png"
@@ -42,7 +42,7 @@
 			class="icon-next" aria-hidden="true"></span> <span class="sr-only">Next</span>
 		</a>
 	</div>
-</div>
+</div-->
 <hr>
 <div class="row">
 	<div class="col-sm-4">

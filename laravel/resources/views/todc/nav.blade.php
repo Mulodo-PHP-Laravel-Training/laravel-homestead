@@ -29,18 +29,21 @@
 					aria-expanded="true">Laravel 5 <span class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ url('general') }}">Requirements</a></li>
+						<li><a href="{{ url('general') }}#g0">Overview</a></li>
+						<li><a href="{{ url('general') }}#g1">Requirements</a></li>
+						<li><a href="{{ url('general') }}#g2">Installation of Laravel 5</a></li>
 						<!-- Installation -->
 						<li role="separator" class="divider"></li>
-						<li class="dropdown-header">Installation</li>
+						<li class="dropdown-header">Installation Laravel Homestead</li>
 						<li><a href="{{ url('general') }}#g2-1">Installation of Vagrant and Virtual Box</a></li>
 						<li><a href="{{ url('general') }}#g2-2">Installation of phpMyAdmin</a></li>
 						<li><a href="{{ url('general') }}#g2-3">Clone Laravel Homestead and configure</a></li>
 						<li><a href="{{ url('general') }}#g2-4">Installing multi sites</a></li>
 						<li><a href="{{ url('general') }}#g2-5">Installing HomeStead on Windows 8.1</a></li>
-						<!-- Installation -->
-						<!-- Database -->
 						<li role="separator" class="divider"></li>
+						<!-- Installation -->
+						<li><a href="{{ url('general') }}#g2-6">Laravel Project Structure</a></li>
+						<!-- Database -->
 						<li class="dropdown-header">Database</li>
 						<li><a href="{{ url('general') }}#g2-3-1">Connect database</a></li>
 						<li><a href="{{ url('general') }}#g2-3-3">Create one table</a></li>
@@ -57,7 +60,8 @@
 						<li><a href="{{ url('general') }}#g6">Form Elements</a></li>
 						<!-- Form -->
 						<li><a href="{{ url('general') }}#g3">Common Errors and Solutions</a></li>
-						<li><a href="{{ url('general') }}#g5">Deployment</a></li>
+						<li><a href="{{ url('general') }}#g5-1">Deployment</a></li>
+						<li><a href="{{ url('general') }}#g5-2">Useful Commands</a></li>
 						<li><a href="{{ url('general') }}#g4">Userful Links</a></li>
 					</ul>
 				</li>
@@ -179,6 +183,7 @@
 						<li><a href="{{ route('architecture') }}#vt1-3-1">Using Laravel 5's Authentication Facade</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="{{ route('architecture') }}#vt1-4">Request LifeCycle</a></li>
+						<li><a href="{{ route('architecture') }}#vt2-1">MVC</a></li>
 					</ul>
 				</li>
 				<li
@@ -189,6 +194,7 @@
 				</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ url('services') }}#vt2-1">Authentication</a></li>
+						<li><a href="{{ url('services') }}#vt2-2">Handling errors in Laravel</a></li>
 					</ul>
 				</li>
 				<li
@@ -230,6 +236,15 @@
 						<li><a href="{{ url('vagrant') }}#vt3"></a></li>
 					</ul>
 				</li>
+				<!--li
+					class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
+					aria-haspopup="true" aria-expanded="true"
+					href="#">Packages<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="{{ url('packalyst') }}">Packalyst</a></li>
+					</ul>
+				</li-->
 			</ul>
 		</div>
 		<!--/.nav-collapse -->

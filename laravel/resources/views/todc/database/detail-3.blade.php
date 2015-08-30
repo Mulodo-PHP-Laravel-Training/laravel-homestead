@@ -172,7 +172,10 @@ class ClientController extends Controller
 		href="{{ route('eloquent-samples','firstOrFail') }}" role="button">View
 		example 6</a>
 </p>
-<p>Retrieving Aggregates: we can use <code>count, max, min, avg, and sum.</code></p>
+<p>
+	Retrieving Aggregates: we can use
+	<code>count, max, min, avg, and sum.</code>
+</p>
 <p>
 	<a class="btn btn-lg btn-primary"
 		href="{{ route('eloquent-samples','count') }}" role="button">View
@@ -181,3 +184,53 @@ class ClientController extends Controller
 		example 8</a>
 </p>
 <h3>Inserting & Updating Models</h3>
+<p>
+	They are used similar with
+	<code>Select</code>
+	Models
+</p>
+<h3>Laravel model</h3>
+<table class="table table-bordered table-striped table-hover">
+	<colgroup>
+		<col class="col-xs-3">
+		<col class="col-xs-3">
+		<col class="col-xs-6">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Meaning</th>
+			<th>Using</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>ClassName</td>
+			<td>Singular of table name</td>
+			<td>protected $table = ‘custom_name’</td>
+		</tr>
+		<tr>
+			<td>Primary key</td>
+			<td>id</td>
+			<td>protected $primaryKey</td>
+		</tr>
+		<tr>
+			<td>Timestamp</td>
+			<td>created_at, updated_at</td>
+			<td>protected $timestamp = [false/true]
+			<p>If you don't want to use default timestamp, you have to set false for this variable. </p>
+			</td>
+		</tr>
+		<tr>
+			<td>Guarded</td>
+			<td>array of fields name</td>
+			<td>protected $guarded = array('id', 'password')</td>
+		</tr>
+		<tr>
+			<td>Fillable</td>
+			<td>Fillable</td>
+			<td>protected $fillable = array('id', 'password')</td>
+		</tr>
+	</tbody>
+</table>
+<p><img src="img/db-relationship.png"></p>
