@@ -27,6 +27,9 @@ return [
     */
 
     'url' => 'http://localhost',
+    
+	// Tien Nguyen - 31/8/2015: for using unit testing
+	//'url' => 'http://homestead.app/', 
 
     /*
     |--------------------------------------------------------------------------

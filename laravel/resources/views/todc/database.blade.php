@@ -9,6 +9,7 @@
 		<div class="col-lg-12" id="vt1">@include('todc.database.detail-1')</div>
 		<div class="col-lg-12" id="vt2">@include('todc.database.detail-2')</div>
 		<div class="col-lg-12" id="vt3">@include('todc.database.detail-3')</div>
+		<div class="col-lg-12" id="vt4">@include('todc.database.detail-4')</div>
 	</div>
 	<hr>
 

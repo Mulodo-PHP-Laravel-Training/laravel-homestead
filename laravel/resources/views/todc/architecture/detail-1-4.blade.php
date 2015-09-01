@@ -2,7 +2,7 @@
 <p>When using any tool in the "real world", you feel more confident if
 	you understand how that tool works. Application development is no
 	different. When you understand how your development tools function, you
-	feel more comfortable and confident using them.</p>
+	feel more comfortable and confident using them. Click <a href="http://laravel-recipes.com/recipes/52/understanding-the-request-lifecycle" target="_blank">here</a> to view more detail.</p>
 <!--div class="row">
 	<div id="carousel-example-generic" class="carousel slide"
 		data-ride="carousel">

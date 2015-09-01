@@ -41,6 +41,10 @@ Route::delete('foo/bar', function () {
 		<!-- close form -->
 	</div>
 	<div class="col-md-1">
+		<form method="POST" action="http://homestead.app/foo/bar" accept-charset="UTF-8" class="form"> <input class="btn
+		btn-lg btn-danger" type="submit" value="Post 2"> </form>
+	</div>
+	<div class="col-md-1">
 		<!-- open form -->
 		{!! Form::open(array('class' => 'form', 'method' => 'put', 'url' =>
 		url('foo/bar'))) !!} {!! Form::submit('Put', array('class'=>'btn

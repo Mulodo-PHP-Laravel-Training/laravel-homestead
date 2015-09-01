@@ -1,4 +1,4 @@
-<h2 id="vt2-2">Handling errors in Laravel</h2>
+<h2>Handling errors in Laravel</h2>
 <p>
 	Its very easy to handle errors or missing
 	<code>files/routes</code>

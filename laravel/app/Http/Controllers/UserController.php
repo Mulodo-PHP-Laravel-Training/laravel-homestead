@@ -14,12 +14,11 @@ class UserController extends Controller {
 	 * @param int $id        	
 	 * @return Response
 	 */
+	public function showProfileUT($id) {
+		$data['first_name'] = 'Anna';
+		return $data;
+	}
 	public function showProfile($id) {
-		/*
-		 * return view ( 'user.profile', [
-		 * 'user' => User::findOrFail ( $id )
-		 * ] );
-		 */
 		return view ( 'user.profile', [ 
 				'userid' => $id 
 		] );

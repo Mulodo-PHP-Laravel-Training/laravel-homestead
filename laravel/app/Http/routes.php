@@ -55,8 +55,10 @@ Route::group ( [
 
 // Mulodo Company Site connecting database and retrieving data.
 // =================================================================================================
-
-// I need to research to clear cache in Homestead because of Bootstrap Google Plus Theme
+// Route to unit testing
+Route::get('welcome', function () {
+	return "Welcome to Mulodo Vietnam!";
+});
 
 // Basic Routing
 Route::get ( 'routing', [ 
