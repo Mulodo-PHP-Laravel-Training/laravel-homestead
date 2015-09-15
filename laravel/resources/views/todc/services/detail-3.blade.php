@@ -104,6 +104,7 @@ FAILURES!
 Tests: 1, Assertions: 2, Failures: 1.
 </pre>
 <h3>Other examples into <code>tests folder</code> that you can preview for testing: login, register, show profile,...</h3>
+<h4>Useful Links</h4>
 <ul>
 <li>http://code.tutsplus.com/tutorials/testing-laravel-controllers--net-31456
 <li>https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.test-dependencies

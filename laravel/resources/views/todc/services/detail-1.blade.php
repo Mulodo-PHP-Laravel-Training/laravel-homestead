@@ -306,4 +306,6 @@ Route::group ( [
 		role="button">View example</a>
 	<a href="{!!URL::route('github-redirectToProvider')!!}">Login with Github</a>
 </p>
+<hr>
+
 

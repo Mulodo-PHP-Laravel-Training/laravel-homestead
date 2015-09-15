@@ -15,4 +15,6 @@
 <li>http://www.thisprogrammingthing.com/2013/getting-started-with-vagrant/
 <li>http://www.unixmen.com/vagrant-creating-virtual-development-environments-made-easy/
 <li>https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins
+<li>https://blog.codecentric.de/en/2012/02/automated-virtual-test-environments-with-vagrant-and-puppet/
+<li>https://blog.codecentric.de/en/2014/04/hadoop-cluster-automation/
 </ul>

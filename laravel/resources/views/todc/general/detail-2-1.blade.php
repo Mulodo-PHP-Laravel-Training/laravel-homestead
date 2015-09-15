@@ -1,5 +1,4 @@
-<h3 id="g2-1">Installation of Vagrant and Virtual Box</h3>
-<p>You only do these steps before installing Laravel Homestead</p>
+<h3 id="g2-1">Step by step to install Laravel Homestead</h3>
 <ol>
 	<li>Download Virtual Box (https://www.virtualbox.org/wiki/Downloads)
 	

@@ -1,5 +1,14 @@
-<h2 id="g5-1">Deployment</h2>
-<p>coming soon...</p>
+<h2 id="g5-1">Deploy your Laravel applications Using these Easy methods</h2>
+<p>To deploy any Laravel application, you will need to perform following steps:</p>
+<ul>
+<li>Creating production configuration
+<li>Creating a directory structure based on your web host
+<li>Uploading your Laravel application directory files via SSH or FTP
+<li>Creating a database in the production site and upload your local database on the production site
+<li>Giving proper permissions to your storage files
+<li>Setting up .htaccess based on your server
+</ul>
+<p>For more detail, please go to <a href="http://learninglaravel.net/deploy-your-laravel-applications-using-these-easy-methods/link">here</a></p>
 <h2 id="g5-2">Useful commands</h2>
 <table class="table table-bordered table-striped">
 	<colgroup>

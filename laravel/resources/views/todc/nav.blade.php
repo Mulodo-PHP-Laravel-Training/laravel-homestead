@@ -30,7 +30,6 @@
 				</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ url('general') }}#g0">Overview</a></li>
-						<li><a href="{{ url('general') }}#g1">Requirements</a></li>
 						<li><a href="{{ url('general') }}#g2">Installation of Laravel 5</a></li>
 						<!-- Installation -->
 						<li role="separator" class="divider"></li>
@@ -38,8 +37,7 @@
 						<li><a href="{{ url('general') }}#g2-1">Installation of Vagrant and Virtual Box</a></li>
 						<li><a href="{{ url('general') }}#g2-2">Installation of phpMyAdmin</a></li>
 						<li><a href="{{ url('general') }}#g2-3">Clone Laravel Homestead and configure</a></li>
-						<li><a href="{{ url('general') }}#g2-4">Installing multi sites</a></li>
-						<li><a href="{{ url('general') }}#g2-5">Installing HomeStead on Windows 8.1</a></li>
+						<li><a href="{{ url('general') }}#g2-4">Installing multi sites and Homestead on Windows 8.1</a></li>
 						<li role="separator" class="divider"></li>
 						<!-- Installation -->
 						<li><a href="{{ url('general') }}#g2-6">Laravel Project Structure</a></li>
@@ -194,6 +192,7 @@
 				</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ url('services') }}#vt1">Authentication</a></li>
+						<li><a href="{{ url('services') }}#vt4">Socialite</a></li>
 						<li><a href="{{ url('services') }}#vt2">Handling errors in Laravel</a></li>
 						<li><a href="{{ url('services') }}#vt3">Unit Testing</a></li>
 					</ul>
@@ -237,15 +236,17 @@
 						<li><a href="{{ url('vagrant') }}#vt3"></a></li>
 					</ul>
 				</li>
-				<!--li
-					class="dropdown">
+				<li>
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button"
-					aria-haspopup="true" aria-expanded="true"
-					href="#">Packages<span class="caret"></span></a>
+					aria-haspopup="true" aria-expanded="true">Members
+						<span class="caret"></span>
+				</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ url('packalyst') }}">Packalyst</a></li>
+						<li><a href="https://docs.google.com/a/mulodo.com/document/d/1W7PKaZFdgpUcralkGS8cKqoHrwynwpzE6S8RQp__FBM/edit?usp=sharing" target="_blank">Tuan Vu</a></li>
+						<li><a href="https://docs.google.com/a/mulodo.com/document/d/1Nx_g4edUNVgV8TQ6MVI1csBHdQXBQ8cRht1ISvNUZcw/edit?usp=sharing" target="_blank">Tuan Nguyen</a></li>
+						<li><a href="https://docs.google.com/a/mulodo.com/document/d/11igFVz2W_KoMeUDizlN0jOIq22lyvDbzETNqwB4Jx2I/edit?usp=sharing" target="_blank">Tam Pham</a></li>
 					</ul>
-				</li-->
+				</li>
 			</ul>
 		</div>
 		<!--/.nav-collapse -->

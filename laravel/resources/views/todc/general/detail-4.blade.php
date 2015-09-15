@@ -50,11 +50,40 @@ dd8802a  default virtualbox running /Users/user/.composer/vendor/laravel/homeste
 	</tbody>
 </table>
 <hr>
+<h3>Official Websites</h3>
+<ul>
+	<li><a href="http://laravel.com/?ref=LearningLaravel">Laravel.com</a></li>
+	<li><a href="https://github.com/laravel/laravel/?ref=LearningLaravel">Laravel
+			on Github</a></li>
+	<li><a href="http://laravel.com/docs/?ref=LearningLaravel">Laravel Docs</a></li>
+</ul>
+<h3>Tutorials, Guides & Communities</h3>
+<ul>
+	<li><a href="http://learninglaravel.net/?ref=LearningLaravel">Learning
+			Laravel</a></li>
+	<li><a href="https://laravel.io/?ref=LearningLaravel">Laracasts</a></li>
+	<li><a href="http://net.tutsplus.com/?s=laravel">net.tuts+</a></li>
+	<li><a
+		href="https://www.youtube.com/user/fallendown2005/?ref=LearningLaravel">Fallendown
+			on Youtube</a></li>
+	<li><a
+		href="http://creative-punch.net/articles/php-articles/laravel-tutorials//?ref=LearningLaravel">Creative
+			Punch</a></li>
+
+</ul>
+<h3>Laravel Helpful Websites</h3>
+<ul>
+	<li><a href="http://laravelsd.com/?ref=LearningLaravel">Laravel Schema
+			Designer</a></li>
+	<li><a href="http://laravelsnippets.com">Laravel Snippets</a></li>
+	<li><a href="http://registry.autopergamene.eu/?ref=LearningLaravel">Laravel
+			Packages Registry</a></li>
+	<li><a href="http://laravel-recipes.com/?ref=LearningLaravel">Laravel
+			Recipes</a></li>
+	<li><a href="http://packalyst.com/?ref=LearningLaravel">Packalyst</a></li>
+</ul>
 <h3>Links</h3>
 <ul>
-	<li><a
-		href="http://packalyst.com/"
-		target="_blank">Packalyst is a directory of Packages for your Laravel projects</a></li>
 	<li><a
 		href="http://www.sitepoint.com/6-reasons-move-laravel-homestead/"
 		target="_blank">6 Reasons to Move to Laravel Homestead </a></li>
